@@ -1,5 +1,6 @@
 package com.semihbaser.crypto;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,16 +16,17 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class BelongingsAdapter extends RecyclerView.Adapter<BelongingsAdapter.BelongingsHolder> {
+public class BelongingsAdapter extends RecyclerView.Adapter<BelongingsHolder> {
 
     private ArrayList<Belongings> belongingsArrayList;
+    Activity activity;
     Context context;
 
 
-
-    public BelongingsAdapter(ArrayList<Belongings> belongingsArrayList, Context context) {
+    public BelongingsAdapter(ArrayList<Belongings> belongingsArrayList, Activity activity) {
         this.belongingsArrayList = belongingsArrayList;
-        this.context=context;
+        this.activity = activity;
+        this.context = activity.getApplicationContext();
 
     }
 
@@ -37,49 +39,31 @@ public class BelongingsAdapter extends RecyclerView.Adapter<BelongingsAdapter.Be
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BelongingsAdapter.BelongingsHolder holder,int position) {
+    public void onBindViewHolder(@NonNull BelongingsHolder holder, int position) {
 
 
         holder.binding.recyclerViewNameText.setText(belongingsArrayList.get(position).name);
         holder.binding.recyclerViewEmailText.setText("Uploaded By: " + belongingsArrayList.get(position).email);
         holder.binding.recyclerViewPriceText.setText(belongingsArrayList.get(position).price);
-        holder.binding.infoText.setText("Info: "+belongingsArrayList.get(position).info);
+        holder.binding.infoText.setText("Info: " + belongingsArrayList.get(position).info);
         Picasso.get().load(belongingsArrayList.get(position).downloadUrl).into(holder.binding.imageView);
 
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = holder.getAdapterPosition();
+                Intent intent = new Intent(activity, SomeActivity.class);
+                intent.putExtra("name", belongingsArrayList.get(position));
+                activity.startActivity(intent);
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
         return belongingsArrayList.size();
-    }
-
-    public class BelongingsHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
-
-
-        private RecyclerRowBinding binding;
-
-
-        public BelongingsHolder(RecyclerRowBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
-
-            binding.getRoot().setOnClickListener(this);
-
-
-        }
-
-        public void onClick(View v){
-            int position =getAdapterPosition();
-            Toast.makeText(context,"position : "+position,Toast.LENGTH_LONG).show();
-            Intent intent =new Intent(context,SomeActivity.class);
-            intent.putExtra("name",belongingsArrayList.get(position).info);
-            context.startActivity(intent);
-        }
-
-
-
     }
 
 

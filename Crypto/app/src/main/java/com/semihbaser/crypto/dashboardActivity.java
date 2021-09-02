@@ -62,7 +62,7 @@ public class dashboardActivity extends AppCompatActivity  {
 
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        belongingsAdapter = new BelongingsAdapter(belongingsArrayList,getApplicationContext());
+        belongingsAdapter = new BelongingsAdapter(belongingsArrayList,this);
         binding.recyclerView.setAdapter(belongingsAdapter);
 
 

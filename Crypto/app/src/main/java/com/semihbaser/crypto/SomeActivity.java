@@ -1,8 +1,12 @@
 package com.semihbaser.crypto;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.squareup.picasso.Picasso;
 
 public class SomeActivity extends AppCompatActivity {
 
@@ -13,7 +17,7 @@ public class SomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_some);
 
-      /*
+
         TextView nameInfo =findViewById(R.id.nameInfo);
         TextView infoText =findViewById(R.id.infoText);
         TextView priceInfo =findViewById(R.id.priceInfo);
@@ -21,13 +25,15 @@ public class SomeActivity extends AppCompatActivity {
 
         String username ="Username not set";
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null){
+        Belongings belongings = (Belongings) getIntent().getSerializableExtra("name");
+        if (belongings != null){
+            nameInfo.setText(belongings.name);
+            infoText.setText(belongings.info);
+            priceInfo.setText(belongings.price);
+            Picasso.get().load(belongings.downloadUrl).into(imageInfo);
 
-            username =extras.getString("username");
         }
-        nameInfo.setText(username);
-*/
+
 
         
 

@@ -38,7 +38,14 @@
         <entry key="..\:/Users/lenova/AndroidStudioProjects/Crypto/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Users/lenova/AndroidStudioProjects/Crypto/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/lenova/AndroidStudioProjects/Crypto/app/src/main/res/mipmap-anydpi-v26/login.xml" value="0.11302083333333333" />
-        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/recycler_row.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/drawable/uploadcolor.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_dashboard.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_login.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_register.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_some.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/activity_upload.xml" value="0.2421875" />
+        <entry key="..\:/Users/semih.baser/StudioProjects/CryptoLast/Crypto/app/src/main/res/layout/recycler_row.xml" value="0.2" />
       </map>
     </option>
   </component>

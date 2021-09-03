@@ -21,6 +21,7 @@ public class SomeActivity extends AppCompatActivity {
         TextView nameInfo =findViewById(R.id.nameInfo);
         TextView infoText =findViewById(R.id.infoText);
         TextView priceInfo =findViewById(R.id.priceInfo);
+        TextView mailInfo=findViewById(R.id.mailInfo);
         ImageView imageInfo =findViewById(R.id.imageInfo);
 
         String username ="Username not set";
@@ -28,8 +29,9 @@ public class SomeActivity extends AppCompatActivity {
         Belongings belongings = (Belongings) getIntent().getSerializableExtra("name");
         if (belongings != null){
             nameInfo.setText(belongings.name);
-            infoText.setText(belongings.info);
+            infoText.setText("Product Info :  "+belongings.info);
             priceInfo.setText(belongings.price);
+            mailInfo.setText("Uploaded By: "+belongings.email);
             Picasso.get().load(belongings.downloadUrl).into(imageInfo);
 
         }

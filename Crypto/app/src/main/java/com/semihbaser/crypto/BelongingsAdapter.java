@@ -45,7 +45,6 @@ public class BelongingsAdapter extends RecyclerView.Adapter<BelongingsHolder> {
         holder.binding.recyclerViewNameText.setText(belongingsArrayList.get(position).name);
         holder.binding.recyclerViewEmailText.setText("Uploaded By: " + belongingsArrayList.get(position).email);
         holder.binding.recyclerViewPriceText.setText(belongingsArrayList.get(position).price);
-        holder.binding.infoText.setText("Info: " + belongingsArrayList.get(position).info);
         Picasso.get().load(belongingsArrayList.get(position).downloadUrl).into(holder.binding.imageView);
 
 

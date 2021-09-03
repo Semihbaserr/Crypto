@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/background2"
     tools:context=".UploadActivity">
 
     <ImageView
@@ -78,7 +78,7 @@
         android:layout_marginBottom="57dp"
         android:onClick="upload"
         android:text="upload"
-        android:textColor="#F10707"
+        android:background="#172196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
